@@ -13,22 +13,22 @@ public class Demo {
 		System.out
 				.println("Выберите какую конфету добавить в коробку:\n 1 Золотой ключик \n 2 Красный мак\n 3 Каракум \n"
 						+ " 4 Chupa Chups ");
-		for (int i = 0; i < Candy.box.length; i++) {
+		for (int i = 0; i < Box.boxArr.length; i++) {
 			switch (in.nextInt()) {
 			case 1:
-				Candy.box[i] = iris;
+				Box.boxArr[i] = iris;
 				System.out.println("Вы выбрали\"Золотой ключик\"");
 				break;
 			case 2:
-				Candy.box[i] = chocoladcandis;
+				Box.boxArr[i] = chocoladcandis;
 				System.out.println("Вы выбрали\"Красный мак\"");
 				break;
 			case 3:
-				Candy.box[i] = chocolateCandies2;
+				Box.boxArr[i] = chocolateCandies2;
 				System.out.println("Вы выбрали\"Каракум\"");
 				break;
 			case 4:
-				Candy.box[i] = lollipops;
+				Box.boxArr[i] = lollipops;
 				System.out.println("Вы выбрали\"Chupa Chups\"");
 				break;
 			default:
@@ -38,24 +38,25 @@ public class Demo {
 
 		}
 		int weightBox = 0;
-		for (int i = 0; i < Candy.box.length; i++) {
-			weightBox += Candy.box[i].getWeight();
+		for (int i = 0; i < Box.boxArr.length; i++) {
+			weightBox += Box.boxArr[i].getWeight();
 		}
 		System.out.println("Вес коробки: " + weightBox + " г.");
 		System.out.println("Введите диапозон содержания сахара:");
 		int a = in.nextInt();
 		int b = in.nextInt();
-		for (int i = 0; i < Candy.box.length; i++) {
-			if (Candy.box[i].getSugar() >= a && Candy.box[i].getSugar() <= b) {
-				System.out.println(Candy.box[i].getName() + " " + Candy.box[i].getWeight() + " г. "
-						+ "Содержание сахара:" + Candy.box[i].getSugar());
+		for (int i = 0; i < Box.boxArr.length; i++) {
+			if (Box.boxArr[i].getSugar() >= a && Box.boxArr[i].getSugar() <= b) {
+				System.out.println(Box.boxArr[i].getName() + " " + Box.boxArr[i].getWeight() + " г. "
+						+ "Содержание сахара:" + Box.boxArr[i].getSugar());
 			}
 		}
-		
-               Candy.sortCandy(Candy.box);
-               for (int i = 0; i < Candy.box.length;i++) {
-            	   System.out.println(Candy.box[i].getName() + " " + Candy.box[i].getWeight() + " " + Candy.box[i].getSugar());
-			}
+
+		Box.sortCandy(Box.boxArr);
+		for (int i = 0; i < Box.boxArr.length; i++) {
+			System.out.println(
+					Box.boxArr[i].getName() + " " + Box.boxArr[i].getWeight() + " " + Box.boxArr[i].getSugar());
+		}
 
 	}
 
