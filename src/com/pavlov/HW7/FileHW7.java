@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 
-public class FileHW {
+public class FileHW7 {
 	public static int count;
 	public static File file = new File("C:\\Users\\Admin\\Desktop\\Text");
 	public static Path path = Paths.get("C:\\Users\\Admin\\Downloads\\OperatorsHW\\src");
