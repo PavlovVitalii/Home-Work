@@ -15,7 +15,6 @@ public class FileHW7 {
 	public static int count;
 	public static File file = new File("C:\\Users\\Admin\\Desktop\\Text");
 	public static Path path = Paths.get("C:\\Users\\Admin\\Downloads\\OperatorsHW\\src");
-    public static String only; 
 	public static int countFiles(File file) {
 		boolean a = file.exists();
 		if (a == true && count < file.list().length) {
